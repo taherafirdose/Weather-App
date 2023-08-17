@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/enterCityName"
+        android:layout_width="165dp"
+        android:layout_height="37dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text="@string/cityName"
+        android:textColor="#333333"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editCityName"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editCityName"
+        android:layout_width="171dp"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:hint="CITY NAME"
+        app:layout_constraintBottom_toTopOf="@+id/fetchWeather_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enterCityName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <Button
+        android:id="@+id/fetchWeather_Button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:background="#EE3369AA"
+        android:text="@string/fetchWeather"
+        android:textSize="24sp"
+        app:backgroundTint="#EE3369AA"
+        app:layout_constraintStart_toStartOf="@id/enterCityName"
+        app:layout_constraintTop_toBottomOf="@id/editCityName" />
+
+    <TextView
+        android:id="@+id/WeatherInfo"
+        android:layout_width="224dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="36dp"
+        android:background="#EE3369AA"
+        android:backgroundTint="#EE3369AA"
+        android:gravity="center"
+        android:lineSpacingExtra="4sp"
+        android:text="Weather Information"
+        android:textColor="#E9FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fetchWeather_Button" />
+
+    <TextView
+        android:id="@+id/tempCText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text="Temperature"
+        android:textColor="#333333"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WeatherInfo" />
+
+    <TextView
+        android:id="@+id/tempCValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempCText"
+        app:layout_constraintTop_toBottomOf="@+id/WeatherInfo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <TextView
+        android:id="@+id/feelslikeCText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text="FeelsLike_C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempCText" />
+
+    <TextView
+        android:id="@+id/feelslikeCValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/feelslikeCText"
+        app:layout_constraintTop_toBottomOf="@+id/tempCValue" />
+
+    <TextView
+        android:id="@+id/windSpeedText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text="WindSpeed_KPH"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feelslikeCText" />
+
+    <TextView
+        android:id="@+id/windSpeedValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/windSpeedText"
+        app:layout_constraintTop_toBottomOf="@+id/feelslikeCValue" />
+
+
+    <TextView
+        android:id="@+id/gustSpeedText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:text="GustSpeed_KPH"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedText" />
+
+    <TextView
+        android:id="@+id/gustSpeedValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gustSpeedText"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedValue" />
+
+    <TextView
+        android:id="@+id/humidityText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Humidity"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gustSpeedText" />
+
+    <TextView
+        android:id="@+id/humidityValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humidityText"
+        app:layout_constraintTop_toBottomOf="@+id/gustSpeedValue" />
+
+    <TextView
+        android:id="@+id/uvText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="UV"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidityValue" />
+
+    <TextView
+        android:id="@+id/uvValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/uvText"
+        app:layout_constraintTop_toBottomOf="@+id/humidityValue" />
+
+    <TextView
+        android:id="@+id/visText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="VIS_KM"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uvText" />
+
+    <TextView
+        android:id="@+id/visValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/visText"
+        app:layout_constraintTop_toBottomOf="@+id/uvText" />
+
+
+    <TextView
+        android:id="@+id/conditionText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Condition Text"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visValue" />
+
+    <TextView
+        android:id="@+id/conditionValue"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border_bg"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/visText"
+        app:layout_constraintTop_toBottomOf="@+id/visValue" />
+
+    <ImageView
+        android:id="@+id/weather_img"
+        android:layout_width="207dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conditionText"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

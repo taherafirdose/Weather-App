@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TaheraAssignment3</string>
+    <string name="fetchWeather">Fetch Weather</string>
+    <string name="cityName">Enter City Name</string>
+</resources>
